@@ -14,6 +14,8 @@ char* intToStr(int num){
     int temp3=0;
     int cnt=0;
     char array[100];
+    int afnum = num;
+    int temp4 = 0;
 
     
 
@@ -21,16 +23,11 @@ char* intToStr(int num){
         ++cnt;
     }
 
-    std::cout << cnt << std::endl;
+    for(i=0; i<=cnt ;i++){
+        temp3 = afnum % 10;
+        afnum /= 10;
 
-    for(i=cnt; 0<i ;i--){
-        for(int j=0;j<i;j++){
-            temp2 *= 10;
-        }
-        std::cout << temp2 << std::endl;
-        temp3 = num / temp2;
-        std::cout << temp3 << std::endl;
-        temp2 = 1;
+        
         
     }
     

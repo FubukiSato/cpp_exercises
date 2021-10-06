@@ -15,7 +15,7 @@ int main(void) {
   // COMPLETE
   // Write tests for the functions intToStr() and strToInt()
 
-  int num = 12345;
+  int num = 12348;
   char *str = "12345";
 
   intToStr(num);
