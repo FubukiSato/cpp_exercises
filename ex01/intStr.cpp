@@ -27,11 +27,15 @@ char* intToStr(int num){
         temp3 = afnum % 10;
         afnum /= 10;
 
-        
+        char c = '0' + temp3;
+
+        array[i] = c;
+
+        std::cout << array[i] << std::endl;
         
     }
     
-    return temp;
+    return array;
 }
 
 int strToInt(char* str){
