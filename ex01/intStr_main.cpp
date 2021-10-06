@@ -1,3 +1,6 @@
+//s1270052 佐藤風吹
+
+
 // num_string_main.cpp
 // Include the appropriate libraries
 

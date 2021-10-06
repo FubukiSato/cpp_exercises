@@ -1,7 +1,10 @@
+//s1270052 佐藤風吹
+
+
 #ifndef INCLUDED_INTSTR
 #define INCLUDED_INTSTR
 
-//関数を定義　
+//関数を定義
 char* intToStr(int);
 int strToInt(char*);
 
