@@ -16,8 +16,11 @@ int main(void) {
   // Write tests for the functions intToStr() and strToInt()
 
   int num = 1234456;
-  char *str = "12345";
+  
+  char *str = nullptr;
   char *ans;
+
+  str = "1023456789";
 
   ans = intToStr(num);
 

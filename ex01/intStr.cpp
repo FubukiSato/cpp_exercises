@@ -40,7 +40,29 @@ char* intToStr(int num){
 }
 
 int strToInt(char* str){
-    std::cout << "test_strToInt" << std::endl;
+    int sum = 0;
+    int i = 0;
+    int cnt = 0;
+    int temp = 1;
+    int temp2 = 0;
+    
+
+    while(str[i] != 0){
+        cnt++;
+        i++;
+    }
+
+    temp2 = cnt;
+
+    for(i=0;i<temp2;i++){
+        int temp2 = str[cnt-1] - '0';
+        sum += temp2*temp;
+        temp *= 10;
+        cnt--;
+    }
+
+    printf("%d\n",sum);
+    
     return 1;
 }
 
