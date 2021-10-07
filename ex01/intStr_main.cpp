@@ -15,10 +15,14 @@ int main(void) {
   // COMPLETE
   // Write tests for the functions intToStr() and strToInt()
 
-  int num = 12348;
+  int num = 1234456;
   char *str = "12345";
+  char *ans;
 
-  intToStr(num);
+  ans = intToStr(num);
+
+  free(ans);
+
   strToInt(str);
 
 }

@@ -8,20 +8,20 @@
 #include "intStr.h"
 
 char* intToStr(int num){
-    char *temp = "a";
     int i;
-    int temp2=1;
     int temp3=0;
     int cnt=0;
-    char array[100];
+    char *ans;
     int afnum = num;
-    int temp4 = 0;
-
+    int cnt2 = 0;
     
 
     while (num /= 10) {
         ++cnt;
     }
+
+    cnt2 = cnt;
+    ans = (char*)malloc(cnt);
 
     for(i=0; i<=cnt ;i++){
         temp3 = afnum % 10;
@@ -29,13 +29,14 @@ char* intToStr(int num){
 
         char c = '0' + temp3;
 
-        array[i] = c;
-
-        std::cout << array[i] << std::endl;
+        ans[cnt2] = c;
         
+        cnt2 -= 1;
     }
+
+    printf("%s\n",ans);
     
-    return array;
+    return ans;
 }
 
 int strToInt(char* str){
