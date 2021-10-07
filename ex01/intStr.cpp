@@ -34,8 +34,6 @@ char* intToStr(int num){
         cnt2 -= 1;
     }
 
-    printf("%s\n",ans);
-    
     return ans;
 }
 
@@ -61,9 +59,7 @@ int strToInt(char* str){
         cnt--;
     }
 
-    printf("%d\n",sum);
-    
-    return 1;
+    return sum;
 }
 
 

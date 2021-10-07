@@ -23,11 +23,11 @@ int main(void) {
   str = "1023456789";
 
   ans = intToStr(num);
-
+  printf("%s\n",ans);
   free(ans);
 
-  strToInt(str);
-
+  int sum = strToInt(str);
+  printf("%d\n",sum);
 }
 
 #endif
