@@ -34,8 +34,8 @@ public:
  std::string top();
 
 private:
-  int _max_size; // capacity of the fixed-size stack 
-  int _top; // index to the top of the stack 
+  int _max_size = 100; // capacity of the fixed-size stack 
+  int _top = 0; // index to the top of the stack 
   std::string* _data; // data container 
 
 };
