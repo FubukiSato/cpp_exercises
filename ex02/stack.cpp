@@ -10,20 +10,16 @@ using namespace std;
 
     bool  Stack::empty(){
         if (_top == -1) {
-            cout << "emptyです\n";
             return true;
         } else {
-            cout << "emptyではありません\n";
             return false;
         }
     }
 
     bool Stack::full(){
         if (_top == 99 ) {
-            cout << "fullです\n";
             return true;
         } else {
-            cout << "fullではありません\n";
             return false;
         }
     }
