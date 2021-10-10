@@ -49,7 +49,9 @@ using namespace std;
     }
 
     string Stack::top(){
-        return _data[_top];
+        string data = _data[_top];
+        _top--;
+        return data;
     }
 
 
