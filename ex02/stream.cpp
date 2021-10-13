@@ -1,3 +1,5 @@
+//s1270052 Fubuki Sato
+
 #ifndef INCLUDED_STREAM
 #define INCLUDED_STREAM
 #define N 256

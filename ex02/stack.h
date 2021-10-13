@@ -1,3 +1,5 @@
+//s1270052 Fubuki Sato
+
 #ifndef INCLUDED_STACK_H
 #define INCLUDED_STACK_H
 
