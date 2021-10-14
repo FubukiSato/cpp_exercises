@@ -37,6 +37,8 @@ public:
  // acces the topmost element
  string top();
 
+ void separator(int);
+
 private:
   int _max_size; // capacity of the fixed-size stack 
   int _top; // index to the top of the stack 

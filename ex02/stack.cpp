@@ -52,5 +52,13 @@ using namespace std;
         return data;
     }
 
+    void Stack::separator(int count){
+        int i=0;
+        while(i < count){
+        cout << "-";
+        i++;
+        }
+    }
+
 
 #endif
