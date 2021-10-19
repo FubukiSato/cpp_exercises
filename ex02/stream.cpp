@@ -1,8 +1,5 @@
 //s1270052 Fubuki Sato
 
-#ifndef INCLUDED_STREAM
-#define INCLUDED_STREAM
-
 #include "stack.h"
 
 #include <iostream>
@@ -53,4 +50,3 @@ return 0;
 
 }
 
-#endif

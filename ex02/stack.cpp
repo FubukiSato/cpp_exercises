@@ -1,8 +1,5 @@
 //s1270052 Fubuki Sato
 
-#ifndef INCLUDED_STACK
-#define INCLUDED_STACK
-
 #include <iostream>
 #include <string>
 #include "stack.h"
@@ -61,4 +58,3 @@ using namespace std;
     }
 
 
-#endif

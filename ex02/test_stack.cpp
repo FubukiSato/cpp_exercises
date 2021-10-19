@@ -2,8 +2,7 @@
 
 // test_stack.cpp
 // Insert the relevant headers here
-#ifndef INCLUDED_TEST_STACK
-#define INCLUDED_TEST_STACK
+
 
 #include <iostream>
 #include <string>
@@ -63,4 +62,3 @@ int main(void) {
   }
 }
 
-#endif
