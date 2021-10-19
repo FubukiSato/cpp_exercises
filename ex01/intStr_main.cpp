@@ -4,9 +4,6 @@
 // num_string_main.cpp
 // Include the appropriate libraries
 
-#ifndef INCLUDED_INTSTR_MAIN
-#define INCLUDED_INTSTR_MAIN
-
 #include <iostream>
 #include "intStr.h"
 
@@ -30,5 +27,5 @@ int main(void) {
   printf("%d\n",sum);
 }
 
-#endif
+
 

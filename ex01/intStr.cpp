@@ -1,9 +1,4 @@
 //s1270052 佐藤風吹
-
-
-#ifndef INCLUDED_INTSTR
-#define INCLUDED_INTSTR
-
 #include <iostream>
 #include "intStr.h"
 
@@ -61,6 +56,3 @@ int strToInt(char* str){
 
     return sum;
 }
-
-
-#endif
