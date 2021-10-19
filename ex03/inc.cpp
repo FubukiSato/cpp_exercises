@@ -1,4 +1,4 @@
-
+//s1270052 Fubuki Sato
 
 void inc(double& a){
     a++;
