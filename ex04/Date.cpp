@@ -1,25 +1,27 @@
+//s1270052 Fubuki Sato
+
 #include <iostream>
 #include "Date.h"
 
-void Date::set(int m, int d, int y) {
+void Date::set(const int m, const int d,const int y) {
     month = m;
     day = d;
     year = y;
 }
 
-void Date::print() {
+void Date::print()const{
     std::cout<<month<<"/"<<day<<"/"<<year<<std::endl;
 }
 
-int Date::get_month() {
+int Date::get_month()const{
     return month;
 }
 
-int Date::get_year() {
+int Date::get_year()const{
     return year;
 }
 
-int Date::get_day() {
+int Date::get_day()const{
     return day;
 }
 

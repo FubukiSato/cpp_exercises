@@ -1,3 +1,5 @@
+//s1270052 Fubuki Sato
+
 #include "Date.h"
 
 int main(void) {
