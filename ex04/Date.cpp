@@ -26,11 +26,29 @@ int Date::get_day()const{
 }
 
 void Date::inc_day() {
-    day++;
+    if(day == 31){
+        if(month == 12){
+            year++;
+            month = 1;
+            day = 1;
+        }
+        else{
+            month++;
+            day = 1;
+        }
+    }else{
+        day++;
+    }
 }
 
 void Date::inc_month() {
-    month++;
+    if(month == 12){
+            year++;
+            month = 1;
+        }
+        else{
+            month++;
+        }
 }
 
 void Date::inc_year() {
