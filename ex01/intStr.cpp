@@ -47,14 +47,17 @@ int strToInt(char* str){
 
     temp2 = cnt;
 
-    for(i=0;i<temp2-1;i++){
+    for(i=0;i<temp2;i++){
+        if(str[cnt-1] == '-') {
+            sum *= -1;
+            break;
+        }
         int temp2 = str[cnt-1] - '0';
         sum += temp2*temp;
         temp *= 10;
         cnt--;
     }
-
-    if(str[cnt-1] == '-') sum *= -1;
+    
 
     return sum;
 }

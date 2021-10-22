@@ -17,7 +17,7 @@ int main(void) {
   char *str = nullptr;
   char *ans;
 
-  str = "-1023456789";
+  str = "-9";
 
   ans = intToStr(num);
   printf("%s\n",ans);
