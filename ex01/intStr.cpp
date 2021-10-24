@@ -35,7 +35,7 @@ char* intToStr(int num){
         char c = '0' + temp3;
 
         ans[cnt2] = c;
-        
+
         cnt2 -= 1;
     }
 
