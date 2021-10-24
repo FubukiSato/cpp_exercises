@@ -7,9 +7,15 @@ char* intToStr(int num){
     int temp3=0;
     int cnt=0;
     char *ans;
-    int afnum = num;
     int cnt2 = 0;
-    
+    int flag=0;
+
+    if(num<0){
+        num *= -1;
+        flag++;
+    }
+
+    int afnum = num;
 
     while (num /= 10) {
         ++cnt;
@@ -27,6 +33,10 @@ char* intToStr(int num){
         ans[cnt2] = c;
         
         cnt2 -= 1;
+    }
+
+    if(flag == 1){
+        
     }
 
     return ans;

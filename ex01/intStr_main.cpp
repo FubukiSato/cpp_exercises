@@ -12,7 +12,7 @@ int main(void) {
   // COMPLETE
   // Write tests for the functions intToStr() and strToInt()
 
-  int num = 1234456;
+  int num = -17;
   
   char *str = nullptr;
   char *ans;
