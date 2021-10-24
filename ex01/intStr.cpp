@@ -21,6 +21,10 @@ char* intToStr(int num){
         ++cnt;
     }
 
+    if(flag == 1){
+        cnt++;
+    }
+
     cnt2 = cnt;
     ans = (char*)malloc(cnt);
 
@@ -36,7 +40,7 @@ char* intToStr(int num){
     }
 
     if(flag == 1){
-        
+        ans[cnt2+1] = '-';
     }
 
     return ans;

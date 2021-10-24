@@ -12,12 +12,12 @@ int main(void) {
   // COMPLETE
   // Write tests for the functions intToStr() and strToInt()
 
-  int num = -17;
+  int num = 7;
   
   char *str = nullptr;
   char *ans;
 
-  str = "-9";
+  str = "12";
 
   ans = intToStr(num);
   printf("%s\n",ans);
