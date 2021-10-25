@@ -12,6 +12,8 @@ stack1.push(3.0);
 stack1.push(4.0);
 stack1.push(5.0);
 
+std::cout << stack1.top() << std::endl;
+
 // Create another instance of ArrayStack named stack2
 // using the other constructor, specify an original size of 5
 ArrayStack stack2(5);
@@ -26,6 +28,8 @@ stack2.push(7.0);
 stack2.push(8.0);
 stack2.push(9.0);
 stack2.push(10.0);
+
+std::cout << stack2.top() << std::endl;
 
 return 0;
 }

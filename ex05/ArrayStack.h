@@ -32,17 +32,23 @@ public:
     /* COMPLETE ... init _num_items to 0, _allocated_size to 0, and
      * set _items to the null pointer, 
      */
+    _num_items = 0;
+    _allocated_size = 0;
+    _items = NULL;
     }
 
     explicit ArrayStack(int allocated_size){
     /* COMPLETE ... init _num_items to 0, 
      * pre-allocate memory for an array of size allocated_size
      * and make _items point to it */
+    _num_items = 0;
+    _items = (double *)malloc(sizeof(double)*allocated_size);
     }
 
     // Destructor:
     ~ArrayStack() {
         // COMPLETE
+        if (_items != NULL) delete[] _items;
     }
 
     void push(double item) {
