@@ -45,6 +45,28 @@ public:
     _items = (double *)malloc(sizeof(double)*allocated_size);
     }
 
+    ArrayStack(const ArrayStack& arraystack){
+        std::cout<< "Copy Constructor" << std::endl;
+        _num_items = arraystack._num_items;
+        _allocated_size = arraystack._allocated_size;
+        _items = (double *)malloc(sizeof(double)*_allocated_size);
+        for(int i=0;i < arraystack._num_items;i++){
+            _items[i] = arraystack._items[i];
+        }
+    }
+
+    ArrayStack& operator= (const ArrayStack& arraystack){
+        std::cout<< "Assignment Operator" << std::endl;
+        if (this == &arraystack) return *this;
+        _num_items = arraystack._num_items;
+        _allocated_size = arraystack._allocated_size;
+        _items = (double *)malloc(sizeof(double)*_allocated_size);
+        for(int i=0;i < arraystack._num_items;i++){
+            _items[i] = arraystack._items[i];
+        }
+        return *this;
+    }
+
     // Destructor:
     ~ArrayStack() {
         // COMPLETE
