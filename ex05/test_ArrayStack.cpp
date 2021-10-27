@@ -1,5 +1,6 @@
 // test_ArrayStack.cpp
 #include "ArrayStack.h"
+#include <utility>
 
 int main(void) {
 
@@ -65,6 +66,50 @@ while(1){
     if(stack4.empty() == true) break;
     std::cout<< stack4.top() << " ";
     stack4.pop();
+}
+
+std::cout << "" << std::endl;
+
+//############# Question3 ######################################################
+
+// Move
+    ArrayStack stack7 = std::move(stack5); //ムーブコンストラクタが呼ばれる
+
+    stack6 = std::move(stack2); //ムーブ代入
+
+    // COMPLETE 
+    // Show the content of the stacks 'stack5', 'stack7', 'stack6' and 'stack2'
+    // (use the same method as in question 2)
+
+
+while(1){
+    if(stack5.empty() == true) break;
+    std::cout<< stack5.top() << " ";
+    stack5.pop();
+}
+
+std::cout << "" << std::endl;
+
+while(1){
+    if(stack7.empty() == true) break;
+    std::cout<< stack7.top() << " ";
+    stack7.pop();
+}
+
+std::cout << "" << std::endl;
+
+while(1){
+    if(stack6.empty() == true) break;
+    std::cout<< stack6.top() << " ";
+    stack6.pop();
+}
+
+std::cout << "" << std::endl;
+
+while(1){
+    if(stack2.empty() == true) break;
+    std::cout<< stack2.top() << " ";
+    stack2.pop();
 }
 
 std::cout << "" << std::endl;

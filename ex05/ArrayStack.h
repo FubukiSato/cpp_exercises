@@ -2,7 +2,7 @@
 
 #include <string>
 #include <iostream>
-
+#include <utility>
 #ifndef ARRAY_STACK_H
 #define ARRAY_STACK_H
 
@@ -63,6 +63,27 @@ public:
         _items = (double *)malloc(sizeof(double)*_allocated_size);
         for(int i=0;i < arraystack._num_items;i++){
             _items[i] = arraystack._items[i];
+        }
+        return *this;
+    }
+
+    ArrayStack(ArrayStack&& arraystack)
+     :_num_items(arraystack._num_items), _items(arraystack._items),_allocated_size(arraystack._allocated_size)
+    {
+        std::cout<< "Move Constructor" << std::endl;
+        arraystack._num_items = 0;
+        arraystack._items = nullptr;
+        arraystack._allocated_size = 0;
+    }
+
+    ArrayStack& operator=(ArrayStack&& arraystack){
+        if(&arraystack != this){
+            _num_items = arraystack._num_items;
+            _items = arraystack._items;
+            _allocated_size = arraystack._allocated_size;
+            arraystack._num_items = 0;
+            arraystack._items = nullptr;
+            arraystack._allocated_size = 0;
         }
         return *this;
     }
