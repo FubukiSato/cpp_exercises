@@ -16,6 +16,10 @@ class Circle : public Shape2D{
     Circle(Point2D center, float radius);
 
     ~Circle();
+
+    protected:
+    Point2D center;
+    float radius;
 };
 
 #endif

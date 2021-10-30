@@ -16,6 +16,11 @@ class Rectangle : public Shape2D{
     Rectangle(Point2D left_corner, float width, float height);
     
     ~Rectangle();
+
+    protected:
+    Point2D left_corner;
+    float width;
+    float height;
 };
 
 #endif
