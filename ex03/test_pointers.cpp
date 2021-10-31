@@ -59,7 +59,7 @@ int main(void)
   // 14. allocate memory for a 2d array of size m * n on the heap (i.e. m arrays of size n).  
   // Make dd points to this 2d array.
   dd = new double*[m];
-  for(int i = 0; i < n; ++i) {
+  for(int i = 0; i < m; ++i) {
         dd[i] = new double[n];
     }
   // 15. set the element dd[i][j] to be equal to double(i)*double(j)
