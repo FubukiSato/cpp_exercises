@@ -1,4 +1,4 @@
-// ArrayStack.h
+//Fubuki Sato s1270052
 
 #include <string>
 #include <iostream>

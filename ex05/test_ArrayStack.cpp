@@ -1,4 +1,4 @@
-// test_ArrayStack.cpp
+//Fubuki Sato s1270052
 #include "ArrayStack.h"
 #include <utility>
 
