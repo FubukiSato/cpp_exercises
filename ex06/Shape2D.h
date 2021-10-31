@@ -1,3 +1,4 @@
+//Fubuki Sato s1270052
 #ifndef Shape_2D_H
 #include <string>
 
