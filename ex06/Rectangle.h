@@ -9,9 +9,9 @@ class Rectangle : public Shape2D{
 
     float compute_area() const;
 
-    Rectangle* create() const;
+    Rectangle* create(Rectangle) const;
 
-    Rectangle* clone() const;
+    Rectangle* clone(Rectangle) const;
 
     Rectangle(Point2D left_corner, float width, float height);
     

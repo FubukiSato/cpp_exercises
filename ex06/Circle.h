@@ -9,9 +9,9 @@ class Circle : public Shape2D{
 
     float compute_area() const;
 
-    Circle* create() const;
+    Circle* create(Circle) const;
 
-    Circle* clone() const;
+    Circle* clone(Circle) const;
 
     Circle(Point2D center, float radius);
 

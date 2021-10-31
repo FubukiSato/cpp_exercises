@@ -2,8 +2,8 @@
 #include <string>
 
 struct Point2D{
-    int x;
-    int y;
+    float x;
+    float y;
 };
 
 class Shape2D{
