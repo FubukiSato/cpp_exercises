@@ -15,6 +15,8 @@ class Rectangle : public Shape2D{
     Rectangle* clone(Rectangle) const;
 
     Rectangle(Point2D left_corner, float width, float height);
+
+    Rectangle(){};
     
     ~Rectangle();
 

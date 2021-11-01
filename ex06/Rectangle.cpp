@@ -10,8 +10,8 @@ float Rectangle::compute_area() const{
 }
 
 Rectangle* Rectangle::create(Point2D left_corner, float width, float height) const{
-    Rectangle rectangle = Rectangle(left_corner,width,height);
-    return &rectangle; //自分のクラスのコンストラクタを呼び出す練習？
+    Rectangle(left_corner,width,height);
+    return &this; //自分のクラスのコンストラクタを呼び出す練習？
 }
 
 Rectangle* Rectangle::clone(Rectangle rectangle) const{
@@ -21,6 +21,8 @@ Rectangle* Rectangle::clone(Rectangle rectangle) const{
 
 Rectangle::Rectangle(Point2D left_corner, float width, float height):
 left_corner(left_corner),width(width),height(height){printf("rectangle_cost\n");}
+
+Rectangle::Rectangle(){}
     
 Rectangle::Rectangle(const Rectangle& rectangle){
     printf("rectangle_cpcost\n");
