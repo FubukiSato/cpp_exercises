@@ -21,8 +21,6 @@ Rectangle* Rectangle::clone(Rectangle rectangle) const{
 
 Rectangle::Rectangle(Point2D left_corner, float width, float height):
 left_corner(left_corner),width(width),height(height){printf("rectangle_cost\n");}
-
-Rectangle::Rectangle(){}
     
 Rectangle::Rectangle(const Rectangle& rectangle){
     printf("rectangle_cpcost\n");
