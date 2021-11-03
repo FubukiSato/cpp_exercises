@@ -9,24 +9,26 @@ float Rectangle::compute_area() const{
     return width*height;
 }
 
-Rectangle* Rectangle::create(Point2D left_corner, float width, float height) const{
-    Rectangle rectangle = Rectangle(left_corner,width,height);
-    return &rectangle; 
+Rectangle* Rectangle::create() const{
+    Point2D point2d;
+    point2d.x = 3.0; point2d.y = 5.0;
+     Rectangle* rec = new Rectangle(point2d,3.0,2.0);
+     return rec;
 }
 
-Rectangle* Rectangle::clone(Rectangle rectangle) const{
-    Rectangle cp_rectangle = rectangle;
-    return &cp_rectangle;
-}
-
-Rectangle::Rectangle(Point2D left_corner, float width, float height):
-left_corner(left_corner),width(width),height(height){printf("rectangle_cost\n");}
+Rectangle* Rectangle::clone() const{
     
+}
+
+Rectangle::Rectangle(Point2D a, float b, float c){
+    left_corner = a;
+    width = b;
+    height = c;
+}
+    
+
 Rectangle::Rectangle(const Rectangle& rectangle){
-    printf("rectangle_cpcost\n");
-    left_corner = rectangle.left_corner;
-    width = rectangle.width;
-    height = rectangle.height;
+
 }
 
 Rectangle::~Rectangle(){
