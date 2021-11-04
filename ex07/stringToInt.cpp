@@ -14,14 +14,14 @@ int stringToInt(const string& input) {
 
   if (instream.fail()) {
     // Error: the input can not be converted
-    throw invalid_argument("input can not be converted to an int");
+    throw invalid_argument("Error: the input can not be converted");
   }
 
   char left;
   instream >> left;
   if (!instream.fail()) {
     // Error: there are some characters left after the int
-    throw invalid_argument("input can not be converted to an int");
+    throw invalid_argument("Error: there are some characters left after the int");
   }
 
   // everything went fine: returns the int
@@ -29,8 +29,6 @@ int stringToInt(const string& input) {
  }
 
 int main(void) {
-    
-
  try{
     string test1 = "11";
     cout << stringToInt(test1) << endl;
