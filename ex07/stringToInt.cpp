@@ -14,14 +14,14 @@ int stringToInt(const string& input) {
 
   if (instream.fail()) {
     // Error: the input can not be converted
-    throw std::invalid_argument("input can not be converted to an int");
+    throw invalid_argument("input can not be converted to an int");
   }
 
   char left;
   instream >> left;
   if (!instream.fail()) {
     // Error: there are some characters left after the int
-    throw std::invalid_argument("input can not be converted to an int");
+    throw invalid_argument("input can not be converted to an int");
   }
 
   // everything went fine: returns the int
