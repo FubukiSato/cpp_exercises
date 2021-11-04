@@ -5,5 +5,6 @@
 int main(void) {
   // COMPLETE 
   // Write tests to test your implementation of the classes Rectangle and Circle. 
-  
+  Rectangle rec;
+  rec.create();
 }

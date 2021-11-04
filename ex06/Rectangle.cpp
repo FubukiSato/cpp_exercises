@@ -12,8 +12,8 @@ float Rectangle::compute_area() const{
 Rectangle* Rectangle::create() const{
     Point2D point2d;
     point2d.x = 3.0; point2d.y = 5.0;
-     Rectangle* rec = new Rectangle(point2d,3.0,2.0);
-     return rec;
+    Rectangle* rec = new Rectangle(point2d,3.0,2.0);
+    return rec;
 }
 
 Rectangle* Rectangle::clone() const{
