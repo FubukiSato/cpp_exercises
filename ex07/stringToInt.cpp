@@ -13,14 +13,12 @@ int stringToInt(const string& input) {
   instream >> number;
 
   if (instream.fail()) {
-    // Error: the input can not be converted
     throw invalid_argument("Error: the input can not be converted");
   }
 
   char left;
   instream >> left;
   if (!instream.fail()) {
-    // Error: there are some characters left after the int
     throw invalid_argument("Error: there are some characters left after the int");
   }
 
