@@ -4,7 +4,17 @@
 #include "Mat4x4.h"
 
 Mat4x4& Mat4x4::operator+ (const Mat4x4& other){
-
+    Mat4x4 result;
+    Mat4x4 m = *this;
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            result.entries[i][j] = 0.0;
+        }
+    }
+    for(int i=0,j=0;i<4 || j<4;i++,j++){
+        result.entries[i][j] = m.entries[i][j] + other.entries[i][j];
+    }
+    return result;
 }
 
 Mat4x4& Mat4x4::operator- (const Mat4x4& other){
@@ -54,11 +64,35 @@ Mat4x4& Mat4x4::operator+= (const Mat4x4& other){
 }
 
 Mat4x4& Mat4x4::operator-= (const Mat4x4& other){
-
+    Mat4x4 result;
+    Mat4x4 m = *this;
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            result.entries[i][j] = 0.0;
+        }
+    }
+    for(int i=0,j=0;i<4 || j<4;i++,j++){
+        result.entries[i][j] = m.entries[i][j] - other.entries[i][j];
+    }
+    return result;
 }
 
 Mat4x4& Mat4x4::operator*= (const Mat4x4& other){
-
+    Mat4x4 result;
+    Mat4x4 m = *this;
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            result.entries[i][j] = 0.0;
+        }
+    }
+    for(int i=0;i<4;i++){
+        for(int j=0;j<4;j++){
+            for(int k=0;k<4;k++){
+                result.entries[i][j]+= m.entries[i][k]*other.entries[k][j];
+            }
+        }
+    }
+    return result;
 }
 
 Mat4x4& Mat4x4::operator- (){
@@ -97,7 +131,13 @@ double& Mat4x4::operator()(int i, int j){
 }
 
 ostream& operator<< (ostream& os, const Mat4x4& other){
-    
+    for (int i=0; i<4; ++i) {
+        for (int j=0; j<4; ++j) {
+            os << other.entries[i][j] << " ";
+        }
+        os << endl;
+    }
+return os;
 }
 
 Mat4x4::Mat4x4(){
