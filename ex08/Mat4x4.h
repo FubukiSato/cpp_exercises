@@ -21,6 +21,9 @@ class Mat4x4{
 
     Mat4x4();
     Mat4x4(double mat[4][4]);
+
+    private:
+    double entries[4][4];
 };
 
 #endif
