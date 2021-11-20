@@ -1,14 +1,11 @@
 //s1270052 Fubuki Sato
 #include <iostream>
 #include <sstream>
-#include <ctype.h>
 #include <stack>
 
 using namespace std;
 
 double evaluateFP(std::string);
-
-//( ( ( 2.0 * ( 3.0 - 1.0 ) ) - 5.0 ) * 3.0 ) 
 
 int main(void){
     string s;
@@ -25,15 +22,38 @@ double evaluateFP(string s){
     stringstream ss;
     stack<double> s1;
     stack<string> s2;
-    string output;
-    double num=0.0;
+    double num;
     ss << s;
     
     while(getline(ss, s, ' ')){
-        if(s == "(" || s == " "){        
+        if(s == "("){        
             continue;
         }
-        else if(s == ")"){ 
+        else if(s == ")"){
+            double num1 = s1.top();
+            s1.pop();
+            double num2 = s1.top();
+            s1.pop();
+            if(s2.top() == "+"){
+                s1.push(num2 + num1);
+                //cout << num2 << "+" << num1 << endl;
+                s2.pop();
+            }
+            else if(s2.top() == "-"){
+                s1.push(num2 - num1);
+                //cout << num2 << "-" << num1 << endl;
+                s2.pop();
+            }
+            else if(s2.top() == "*"){
+                s1.push(num2 * num1);
+                //cout << num2 << "*" << num1 << endl;
+                s2.pop();
+            }
+            else if(s2.top() == "/"){
+                s1.push(num2 / num1);
+                //cout << num2 << "/" << num1 << endl;
+                s2.pop();
+            }
         }
         else if(s == "+" || s == "-" || s == "*" || s == "/"){ 
             s2.push(s);
@@ -42,7 +62,6 @@ double evaluateFP(string s){
             num = stod(s);
             s1.push(num);
         }
-    }
-
-    return 3.2;
+    }  
+    return s1.top();
 }
