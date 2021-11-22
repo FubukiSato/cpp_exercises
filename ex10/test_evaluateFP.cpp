@@ -8,10 +8,9 @@ using namespace std;
 double evaluateFP(std::string);
 
 int main(void){
-    string s;
+    string s = "( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )";
     double ans;
-    cout<< "Input: ";
-    getline(cin,s);
+    cout<< "Input: " << s <<endl;
 
     ans = evaluateFP(s);
     
