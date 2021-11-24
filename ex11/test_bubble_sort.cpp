@@ -1,31 +1,42 @@
 //s1270052 Fubuki Sato
 #include <iostream>
 #include <vector>
-#include <stdio.h>
- 
+
+using namespace std;
+
+namespace PL4 {  
+ template <class FwdIt>
+ void
+ sort(FwdIt begin, FwdIt end);
+}
+
 int main(){
-std::vector<int> vec{ 1, 2, 3, 4, 5 };
-std::vector<int>::iterator itr = vec.begin();
 
-//itrが指す要素を表示
-//1
-std::cout << *itr << std::endl;
+vector<int> vec{11,25,4,555,67,3,1};
+vector<int>::iterator itr1 = vec.begin();
+vector<int>::iterator itr2 = vec.end();
 
-//次の要素に移動
-itr++;
+PL4::sort(itr1,itr2);
 
-//2
-std::cout << *itr << std::endl;
+while(itr1 != itr2){
+    cout<<*itr1 <<" "<<endl;
+    *itr1++;
+}
+}
 
-//前の要素に移動
-itr--;
-
-//1
-std::cout << *itr << std::endl;
-
-//3つ後ろの要素に移動
-itr += 3;
-
-//4
-std::cout << *itr << std::endl;
+namespace PL4 {  
+ template <class FwdIt>
+ void
+ sort(FwdIt begin, FwdIt end){
+    while (begin < end) {
+    auto it1 = begin;
+    auto it2 = begin + 1;
+    while (it2 < end) {
+      if (*it1 > *it2) std::swap(*it1, *it2);
+      ++it1;
+      ++it2;
+    }
+    --end;
+  }
+ }
 }
