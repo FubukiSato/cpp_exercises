@@ -14,7 +14,6 @@ typedef std::priority_queue<int, std::list<Point> > doublepriority_queue;
 namespace L12{
 template <class List>
 List find_k_closest(int k,List list){
-
     return list;
 }
 }
@@ -45,7 +44,7 @@ int main(void) {
   L12::find_k_closest(3,doublepriority_queue1);
 
   while(!doublepriority_queue1.empty()){
-      std::cout<<doublepriority_queue1.top()<<std::endl;
+      std::cout<<doublepriority_queue1.top().x << doublepriority_queue1.top().y << doublepriority_queue1.top().z <<std::endl;
   }
 
   return 0;
