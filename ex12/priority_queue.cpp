@@ -12,23 +12,10 @@ struct Point {
  double x, y, z;
 };
 
-
-bool operator <(const Point p1, const Point p2){
-    if(sqrt(pow(p1.x,2)+pow(p1.y,2)+pow(p1.z,2)) < sqrt(pow(p2.x,2)+pow(p2.y,2)+pow(p2.z,2))) return true;
-    else return false;
-};
-
-
-bool operator >(const Point p1, const Point p2){
-    if(sqrt(pow(p1.x,2)+pow(p1.y,2)+pow(p1.z,2)) > sqrt(pow(p2.x,2)+pow(p2.y,2)+pow(p2.z,2))) return true;
-    else return false;
-};
-
-
 class Compare{
     public:
     bool operator()(Point p1,Point p2){
-        if(sqrt(pow(p1.x,2)+pow(p1.y,2)+pow(p1.z,2)) < sqrt(pow(p2.x,2)+pow(p2.y,2)+pow(p2.z,2))){ 
+        if(sqrt(pow(p1.x,2)+pow(p1.y,2)+pow(p1.z,2)) > sqrt(pow(p2.x,2)+pow(p2.y,2)+pow(p2.z,2))){ 
             return true;
         }
         else{ 
@@ -37,8 +24,8 @@ class Compare{
     }
 };
 
-    priority_queue<Point,vector<Point>,greater<Point> > find_k_closest(int k,priority_queue<Point,vector<Point>,greater<Point> > list){
-    priority_queue<Point,vector<Point>,greater<Point> > point;
+    priority_queue<Point,vector<Point>,Compare > find_k_closest(int k,priority_queue<Point,vector<Point>,Compare > list){
+    priority_queue<Point,vector<Point>,Compare > point;
     Compare cmp;
     for(int i=0;i<k;i++){
         point.push(list.top());
@@ -49,8 +36,8 @@ class Compare{
 
 
 int main(void) {
-  priority_queue<Point,vector<Point>,greater<Point> > doublepriority_queue;
-  priority_queue<Point,vector<Point>,greater<Point> > point2;
+  priority_queue<Point,vector<Point>,Compare > doublepriority_queue;
+  priority_queue<Point,vector<Point>,Compare > point2;
 
   Point p1 = Point(1.0,3.0,5.0);
   Point p2 = Point(3.0,4.0,3.0);
