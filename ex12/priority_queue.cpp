@@ -4,7 +4,7 @@
 #include <list>
 #include <math.h>
 
-
+using namespace std;
 
 struct Point {
  Point() : x(0.0), y(0.0), z(0.0) {}
@@ -37,9 +37,7 @@ class Compare{
     }
 };
 
-using namespace std;
-
-priority_queue<Point,vector<Point>,greater<Point> > find_k_closest(int k,priority_queue<Point,vector<Point>,greater<Point> > list){
+    priority_queue<Point,vector<Point>,greater<Point> > find_k_closest(int k,priority_queue<Point,vector<Point>,greater<Point> > list){
     priority_queue<Point,vector<Point>,greater<Point> > point;
     Compare cmp;
     for(int i=0;i<k;i++){
