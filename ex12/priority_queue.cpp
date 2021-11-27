@@ -37,24 +37,22 @@ class Compare{
     }
 };
 
-
-/*Point find_k_closest(int k,vector<Point> list){
-    std::vector<Point> point;
-    for(int i=0;i<k;i++){
-        point.push_back(list);
-    }
-    return list;
-}*/
-
 using namespace std;
 
-int main(void) {
-    std::priority_queue<Point> doublepriority_queue;
-  // COMPLETE 
-  // Add code to test your implementation of the function find_k_closest()
+priority_queue<Point,vector<Point>,greater<Point> > find_k_closest(int k,priority_queue<Point,vector<Point>,greater<Point> > list){
+    priority_queue<Point,vector<Point>,greater<Point> > point;
+    Compare cmp;
+    for(int i=0;i<k;i++){
+        point.push(list.top());
+        list.pop();
+    }
+    return point;
+}
 
-  Compare cmp;
-  bool ans;
+
+int main(void) {
+  priority_queue<Point,vector<Point>,greater<Point> > doublepriority_queue;
+  priority_queue<Point,vector<Point>,greater<Point> > point2;
 
   Point p1 = Point(1.0,3.0,5.0);
   Point p2 = Point(3.0,4.0,3.0);
@@ -62,21 +60,17 @@ int main(void) {
   Point p4 = Point(4.0,1.0,3.0);
   Point p5 = Point(9.0,1.0,1.0);
 
-  //ans = cmp(p1,p2);
-
-  //cout << ans << endl;
-
   doublepriority_queue.push(p1);
   doublepriority_queue.push(p2); 
   doublepriority_queue.push(p3);
   doublepriority_queue.push(p4);
   doublepriority_queue.push(p5);
 
-  /*find_k_closest(3,doublepriority_queue);*/
+  point2 = find_k_closest(3,doublepriority_queue);
 
-  while(!doublepriority_queue.empty()){
-      std::cout<<doublepriority_queue.top().x<< " " << doublepriority_queue.top().y << " " << doublepriority_queue.top().z <<std::endl;
-      doublepriority_queue.pop();
+  while(!point2.empty()){
+      std::cout<<point2.top().x<< " " << point2.top().y << " " << point2.top().z <<std::endl;
+      point2.pop();
   }
 
   return 0;
