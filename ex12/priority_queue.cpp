@@ -54,7 +54,7 @@ int main(void) {
   point2 = find_k_closest(3,doublepriority_queue);
 
   while(!point2.empty()){
-      std::cout<<point2.top().x<< " " << point2.top().y << " " << point2.top().z <<std::endl;
+      std::cout<<point2.top().x<< " " << point2.top().y << " " << point2.top().z << " " << std::endl;
       point2.pop();
   }
 
